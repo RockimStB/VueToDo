@@ -1,6 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" >
+    <link rel="stylesheet" href="/CSS/tailwind.css"> <!--Using this link allows tailwind css to be used simular to linking a css style sheet-->
+  <div class=container>
     <Todos/>
+    </div>
   </div>
 </template>
 
@@ -16,5 +19,17 @@ export default {
 </script>
 
 <style>
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 1.6;
+  background: #e8f7f0;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 2rem;
+}
 
 </style>
