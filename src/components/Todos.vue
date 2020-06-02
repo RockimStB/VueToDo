@@ -2,10 +2,12 @@
 <template>
     <div>
         <h3 >Todos to do</h3>
-        <div class="todos"></div>
-        <!--I am going to be looping through the div below using the v-for and calling the allTodos getter-->
-        <div v-for="todos in allTodos" v-bind:key="todos.id" class="todo">
-            {{todos.title}}
+        <div class="todos">
+            <!--I am going to be looping through the div below using the v-for and calling the allTodos getter-->
+            <div v-for="todos in allTodos" v-bind:key="todos.id" class="todo">
+                 {{todos.title}}
+                 <i class="fas fa-trash"></i>
+            </div>
         </div>
     </div>
 </template>
@@ -27,7 +29,7 @@ import {mapGetters,mapActions } from "vuex";
 </script>
 
 <style scoped>
-.todos {
+.todos{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
