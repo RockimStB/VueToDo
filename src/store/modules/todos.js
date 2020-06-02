@@ -3,7 +3,21 @@ import axios from 'axios'
 
 
 const state= {
-    todos:[]
+    todos:[{
+        userId:1,
+        id:1,
+        title: 'this is first todo',
+        completed:false
+    },
+        {
+    
+            userId:1,
+            id:2,
+            title: 'this is first todo',
+            completed:true
+        }
+    
+    ]
 }
 
 //to get our todos to display I need to add a getter
@@ -20,7 +34,7 @@ const actions= {
     },
 
     async addTodo ({ commit }, title){
-        const response= await axios.post('http://jsonplaceholder.typicode.com/todos',{title,
+        const response= await axios.post('https://jsonplaceholder.typicode.com/todos',{title,
     completed:false});
     //any new todo will not be completed
 

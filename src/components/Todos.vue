@@ -6,7 +6,7 @@
             <!--I am going to be looping through the div below using the v-for and calling the allTodos getter-->
             <div v-for="todos in allTodos" v-bind:key="todos.id" class="todo">
                  {{todos.title}}
-                 <i class="fas fa-trash"></i>
+                  <i class="fas fa-trash-alt"></i>
             </div>
         </div>
     </div>
@@ -41,6 +41,14 @@ import {mapGetters,mapActions } from "vuex";
   border-radius: 5px;
   text-align: center;
   position: relative;
+  cursor: pointer;
+}
+
+i {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
   cursor: pointer;
 }
 </style>
